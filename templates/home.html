@@ -4,5 +4,10 @@
 
 {% block content %}
     <h1>Homepage</h1>
+    {% if user.is_authenticated %}
+        {{ user.username }}
+    {% else %}
+        <a href="{% url "login" %}">Log in</a>
+    {% endif %}
 {% endblock content %}
 

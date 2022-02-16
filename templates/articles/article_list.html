@@ -3,7 +3,10 @@
 {% block title %}Liste des articles{% endblock title %}
 
 {% block content %}
-    {% for article in article_list %}
-    <h2><a href="{{ article.get_absolute_url }}">{{ article.title }}</a></h2>
-    {% endfor %}
+    <div class="container is-max-desktop">
+        <h1 class="title is-1">Tous les articles</h1>
+        {% for article in article_list %}
+        <h2 class="title is-4"><a href="{{ article.get_absolute_url }}">{{ article.title }}</a></h2>
+        {% endfor %}
+    </div>
 {% endblock content %}

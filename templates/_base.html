@@ -47,7 +47,7 @@
           <a class="navbar-item">
             Portfolio
           </a>
-          <a class="navbar-item">
+          <a class="navbar-item" href="{% url "article_list" %}">
             Articles
           </a>
           <a class="navbar-item">
@@ -56,9 +56,11 @@
       </div>
   </nav>
 
+  <section class="section">
   {% block content %}
 
   {% endblock content %}
+  </section>
 
   <!-- <script src="js/vendor/modernizr-3.11.2.min.js"></script> -->
   <!-- <script src="js/plugins.js"></script> -->

@@ -5,9 +5,10 @@
 {% block content %}
     <h1>Homepage</h1>
     {% if user.is_authenticated %}
-        {{ user.username }}
+    <p>>{{ user.username }}</p>
     {% else %}
-        <a href="{% url "login" %}">Log in</a>
+    <p><a href="{% url "login" %}">Log in</a></p>
     {% endif %}
+    <p><a href="{% url "article_list" %}">Tous les articles</a></p>
 {% endblock content %}
 

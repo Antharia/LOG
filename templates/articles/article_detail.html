@@ -4,7 +4,11 @@
 
 
 {% block content %}
-    <h2><a href="">{{ article.title }}</a></h2>
+    <div class="container is-max-desktop">
+    <h2 class="title is-2"><a href="">{{ article.title }}</a></h2>
+    <div class="content">
     <p>{{ article.formatted_markdown|safe }}</p>
+    </div>
+    </div>
 {% endblock content %}
 

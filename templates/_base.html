@@ -4,6 +4,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>{% block title %}Antharia Jack{% endblock title %}</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,12 +24,13 @@
 
   {% comment %} <link rel="stylesheet" href="{% static "css/normalize.css" %}"> {% endcomment %}
   {% comment %} <link rel="stylesheet" href="{% static "css/main.css"%} "> {% endcomment %}
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <link rel="stylesheet" href="{% static "css/mybulma/css/mystyles.css" %}"/>
+  {% comment %} <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"> {% endcomment %}
   <link rel="stylesheet" type="text/css" href="https://unpkg.com/bulma-prefers-dark" />
 
 </head>
 
-<body>
+<body class="has-navbar-fixed-top">
 
   <!-- Add your site or application content here -->
   <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
@@ -58,9 +60,11 @@
   </nav>
 
   <section class="section">
-  {% block content %}
+      <div class="container">
+        {% block content %}
 
-  {% endblock content %}
+        {% endblock content %}
+      </div>
   </section>
 
   <!-- <script src="js/vendor/modernizr-3.11.2.min.js"></script> -->

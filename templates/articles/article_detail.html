@@ -1,14 +1,12 @@
 {% extends "_base.html" %}
 
-{% block title %}{{ object.title }}{% endblock title %}
+{% block title %}{{ article.title }}{% endblock title %}
 
 
 {% block content %}
-    <div class="container is-max-desktop">
     <h2 class="title is-2"><a href="">{{ article.title }}</a></h2>
     <div class="content">
-    <p>{{ article.formatted_markdown|safe }}</p>
-    </div>
+        {{ article.formatted_markdown|safe }}
     </div>
 {% endblock content %}
 

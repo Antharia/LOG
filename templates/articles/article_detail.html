@@ -8,5 +8,10 @@
     <div class="content">
         {{ article.formatted_markdown|safe }}
     </div>
+    <div>
+        {% for tag in article.tags.names %}
+                #{{ tag }}
+        {% endfor %}
+    </div>
 {% endblock content %}
 

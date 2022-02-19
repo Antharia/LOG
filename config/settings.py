@@ -40,6 +40,7 @@ INSTALLED_APPS = [
      
     #  3rd-party
     'markdownx',
+    'taggit',
 
     #  Local
     'accounts.apps.AccountsConfig',
@@ -144,3 +145,5 @@ AUTH_USER_MODEL = 'accounts.CustomUser'
 
 LOGIN_REDIRECT_URL = "home"
 LOGOUT_REDIRECT_URL = "home"
+
+TAGGIT_CASE_INSENSITIVE = True

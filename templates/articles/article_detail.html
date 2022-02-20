@@ -9,8 +9,8 @@
         {{ article.formatted_markdown|safe }}
     </div>
     <div>
-        {% for tag in article.tags.names %}
-                #{{ tag }}
+        {% for tag in article.tags.all %}
+        <a href="{% url "articles_by_tag"  tag.slug %}">#{{ tag.name }}</a>
         {% endfor %}
     </div>
 {% endblock content %}
